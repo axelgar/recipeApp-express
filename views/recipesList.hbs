@@ -1,0 +1,17 @@
+<h1>This is the list of Recipes</h1>
+
+<form action="/recipes/search" method="GET">
+  <label for="title">Look for a recipe by title</label>
+  <input type="text" name="title" id="title">
+  <button type="submit">Search</button>
+</form>
+
+<ul>
+  {{#each recipes}}
+    <li>
+      <a href="/recipes/details/{{_id}}">
+        <p>{{title}}</p>
+      </a>
+    </li>
+  {{/each}}
+</ul>

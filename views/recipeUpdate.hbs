@@ -1,0 +1,23 @@
+<form action="/recipes/details/{{_id}}/edit" method="POST">
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title" value="{{title}}" required>
+
+  <label for="duration">Duration</label>
+  <input type="number" name="duration" id="duration" value="{{duration}}">
+
+  <label for="level">Level</label>
+  <select name="level" id="level">
+    <option value="{{level}}" readonly selected>{{level}}</option>
+    <option value="Easy Peasy">Easy Peasy</option>
+    <option value="Amateur Chef">Amateur Chef</option>
+    <option value="UltraPro Chef">UltraPro Chef</option>
+  </select>
+
+  <label for="cuisine">Cuisine</label>
+  <input type="text" name="cuisine" id="cuisine" required value="{{cuisine}}">
+
+  <label for="created">Created date</label>
+  <input type="date" name="created" id="created" value="{{created}}">
+
+  <button type="submit">Add recipe</button>
+</form>
